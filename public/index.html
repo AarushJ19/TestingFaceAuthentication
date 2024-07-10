@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>FaceID.js Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #videoElement {
+            display: none;
+        }
+        #capture-button {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Register with FaceID</h1>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" required>
+            </div>
+            <button type="button" id="start-button" class="btn btn-primary">Start Capture</button>
+        </form>
+        <video id="videoElement" width="640" height="480" autoplay></video>
+        <button id="capture-button" class="btn btn-secondary">Capture Image</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script defer src="/face-api.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
